@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.znv.framework.dao.mapper.RealDataMapper">
+    <!--通过<resultMap>映射实体类属性名和表的字段名对应关系 -->
+
+
+    <insert id="insertRealData" parameterType="map">
+        INSERT INTO
+        t_zxm_metedatahis (fsu_id, device_id, mete_id, data_type,
+        measuredval, setupval, status_fg, recordtime)
+        VALUES
+        (
+        #{fsuId, jdbcType=VARCHAR},
+        #{deviceId, jdbcType=VARCHAR},
+        #{meteId, jdbcType=VARCHAR},
+        #{type, jdbcType=INTEGER},
+        #{measuredval, jdbcType=FLOAT},
+        #{setupval, jdbcType=FLOAT},
+        #{status, jdbcType=INTEGER},
+        #{recordtime, jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <insert id="insertRealDataList" parameterType="java.util.List">
+        INSERT INTO
+        t_zxm_metedatahis (fsu_id, device_id, mete_id, data_type,
+        measuredval, setupval, status_fg, recordtime)
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.fsuId, jdbcType=VARCHAR},
+            #{item.deviceId, jdbcType=VARCHAR},
+            #{item.meteId, jdbcType=VARCHAR},
+            #{item.type, jdbcType=INTEGER},
+            #{item.measuredval, jdbcType=FLOAT},
+            #{item.setupval, jdbcType=FLOAT},
+            #{item.status, jdbcType=INTEGER},
+            #{item.recordtime, jdbcType=VARCHAR})
+        </foreach>
+    </insert>
+
+</mapper>

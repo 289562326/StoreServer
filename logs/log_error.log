@@ -1,0 +1,2 @@
+2018-12-31 10:02:01 ERROR - hello error,{} (com.znv.peim.test.LogTest.main:15) [main:5822]
+2018-12-31 10:05:17 ERROR - Table 'usmschis.t_zxm_metedatahist' doesn't exist (com.znv.data.dao.Database.executeNonQuery:355) [main:7474]

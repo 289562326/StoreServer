@@ -1,0 +1,8 @@
+2018-12-31 10:02:01  INFO - hello info,{} (com.znv.peim.test.LogTest.main:14) [main:5821]
+2018-12-31 10:02:01 ERROR - hello error,{} (com.znv.peim.test.LogTest.main:15) [main:5822]
+2018-12-31 10:05:15  INFO - Database 'ZNVDB' use connection pool (com.znv.data.dao.DataSourceBuilder.buildDataSource:65) [main:4984]
+2018-12-31 10:05:15  INFO - Init database 'ZNVDB' successfully (com.znv.data.dao.DatabaseFactory.initDB:143) [main:5254]
+2018-12-31 10:05:15  INFO - Database 'HISDB' use connection pool (com.znv.data.dao.DataSourceBuilder.buildDataSource:65) [main:5258]
+2018-12-31 10:05:15  INFO - Init database 'HISDB' successfully (com.znv.data.dao.DatabaseFactory.initDB:143) [main:5268]
+2018-12-31 10:05:15  INFO - 2 databases config success (com.znv.data.dao.DatabaseFactory.initDB:149) [main:5268]
+2018-12-31 10:05:17 ERROR - Table 'usmschis.t_zxm_metedatahist' doesn't exist (com.znv.data.dao.Database.executeNonQuery:355) [main:7474]
